@@ -1,0 +1,666 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    margin-top: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill , 6.5rem);
+    /* 
+The CSS grid layout property grid-template-columns: repeat(auto-fill, 6.5rem); will create a grid with as many columns as
+ needed to fill the container, each column being 6.5rem wide. The auto-fill keyword tells the browser to automatically add as many columns as needed to fill the container. 
+The 6.5rem value specifies the width of each column. */
+grid-row-gap: 4rem;
+place-items: center;
+justify-content: center;
+
+}
+header{
+  text-align:center;
+  font-size:15px;
+  animation-name:headingAnimation;
+  animation-duration:5s;
+  animation-iteration-count:infinite;
+  box-shadow: 0 0 0px 0 rgba(0, 0, 0, 0.12), 0 2px 4px 0 rgba(0, 0, 0, 0.56);
+  margin-top:15px;
+  padding: 8px 12px;
+  
+  
+}
+@keyframes headingAnimation{
+  0%{
+    color:Purple;
+  }
+  25%{
+    color:red;
+  }
+  100%{
+    color:blue;
+  }
+}
+footer{
+  text-align:center;
+  margin-top: 150px;
+  
+}
+[class|="toggle"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    width: 5rem;
+    height: 5rem;
+    background: linear-gradient(to left bottom ,
+    #7B68EE ,#F9629F);
+    box-shadow: 6px 13px 20px #f790f08a;
+    border-radius: 6px;
+    cursor: pointer;
+    
+
+
+}
+span{
+    background-color: white;
+    height: 6%;
+    width: 45%;
+    border-radius: 20px;
+    /* 
+The CSS transition property transition: opacity, transform, 1s; will cause an element to gradually \
+change its opacity and transform properties over a period of 1 second. The opacity property controls how transparent an element
+is, while the transform property controls how an element is positioned and scaled. */
+    transition:opacity , transform ,1s ;
+
+}
+/* transformation 1 */
+.type1 .line1{
+    transform: rotate(45deg) translate(23% ,200%); 
+    /* 
+The CSS transform property transform: rotate(45deg) translate(23%, 200%); will rotate an element 45 degrees and translate it 23% to the right and 200% down. 
+The rotate property rotates an element around its origin, while the translate property moves an element to a new position. */
+
+}
+.type1 .line2{
+    opacity: 0;
+
+}
+.type1 .line3{
+    transform: rotate(-45deg) translate(23% , -200%);
+}
+/* transformation 2 */
+.type2 .line1{
+    transform: translate(0% ,270%) rotate(-45deg); 
+
+}
+.type2 .line2{
+    opacity: 0;
+
+}
+.type2 .line3{
+    transform: translate(0% , -270%) rotate(45deg);
+}
+
+/* transformation 3 */
+.type3 .line1{
+  transform: rotate(45deg) translate(23% ,200%);
+}
+.type3 .line2{
+  opacity:0;
+}
+.type3 .line3{
+  transform:rotate(135deg) translate(-25% ,200%);
+}
+
+/* transformation 4 */
+.type4 .line1{
+    transform: rotate(405deg) translate(23% ,200%); 
+
+}
+.type4 .line2{
+    opacity: 0;
+
+}
+.type4 .line3{
+    transform: rotate(135deg) translate(-25% , 200%);
+}
+
+/* transformation 5 */
+.type5 .line1{
+    transform: rotate(405deg) translate(23% ,200%); 
+
+}
+.type5 .line2{
+    opacity: 0;
+
+}
+.type5 .line3{
+    transform:rotate(495deg) translate(-25% , 200%);
+}
+
+/* transformation 6 */
+.type6 .line1{
+    transform: translate(0% ,275%) rotate(405deg); 
+
+}
+.type6 .line2{
+    opacity: 0;
+    transform: rotate(360deg);
+
+
+}
+.type6 .line3{
+    transform: translate(0% , -275%) rotate(495deg);
+}
+
+/* transformation 7 */
+.type7 .line1{
+    transform: translateY(265%) ; 
+
+}
+
+.type7 .line3{
+    transform: translateY(-265%) ;
+}
+
+/* transformation 8 */
+.type8 .line1{
+    transform: translateY(265%) ; 
+
+}
+
+.type8 .line3{
+    transform: translateY(-265%) rotate(90deg);
+}
+
+/* transformation 9 */
+.type9 .line1{
+    transform: translateY(265%) rotate(90deg); 
+
+}
+
+.type9 .line3{
+    transform: translateY(-265%) ;
+}
+/* transformation 10 */
+.type10 .line1{
+  transform: rotate(45deg) translate(5% ,5%);
+}
+.type10 .line2{
+  opacity:0;
+}
+.type10 .line3{
+  transform:rotate(-45deg) translate(5% ,-5%);
+}
+
+/* transformation 11 */
+.type11 .line1{
+  transform: rotate(-45deg) translate(-5% ,5%);
+}
+.type11 .line2{
+  opacity:0;
+}
+.type11 .line3{
+  transform:rotate(45deg) translate(-5% ,-5%);
+}
+
+/* transformation 12 */
+.type12 .line1{
+  transform: rotate(405deg) translate(5% ,5%);
+}
+.type12 .line2{
+  opacity:0;
+}
+.type12 .line3{
+  transform:rotate(-405deg) translate(5% ,-5%);
+}
+
+/* transformation 13 */
+.type13 .line1{
+  transform: rotate(-405deg) translate(-5% ,5%);
+}
+.type13 .line2{
+  opacity:0;
+}
+.type13 .line3{
+  transform:rotate(405deg) translate(-5% ,-5%);
+}
+/* transformation 14 */
+.type14 .line1{
+  transform:  translateY(500%) rotate(225deg);
+}
+.type14 .line2{
+  opacity:0;
+}
+.type14 .line3{
+  transform: translateY(-500%) rotate(-225deg);
+}
+
+/* transformation 15 */
+.type15 .line1{
+  transform:  translateY(500%) rotate(135deg);
+}
+.type15 .line2{
+  opacity:0;
+}
+.type15 .line3{
+  transform: translateY(-500%) rotate(-135deg) ;
+}
+
+/* transformation 16 */
+ .type16 .line1{
+  transform: rotate(225deg) translate(-40% , -400%);
+}
+.type16 .line2{
+  opacity:0;
+  transform:rotate(180deg);
+}
+.type16 .line3{
+  transform: rotate(135deg) translate(-40% , 400%) ;
+} 
+/* transformation 17 */
+.type17 .line1 {
+  transform: rotate(-225deg) translate(48%, -350%);
+}
+
+.type17 .line2 {
+  opacity: 0;
+  transform: rotate(-180deg);
+}
+
+.type17 .line3 {
+  transform: rotate(-135deg) translate(48%, 350%);
+}
+/* transformation 18 */
+.type18 .line1 {
+  transform: rotate(-135deg) translate(-40%, -400%);
+}
+
+.type18 .line2 {
+  opacity: 0;
+  transform: rotate(-180deg);
+}
+
+.type18 .line3 {
+  transform: rotate(135deg) translate(-40%, 400%);
+}
+/* transformation 19 */
+.type19 .line1 {
+  transform: rotate(135deg) translate(48%, -350%);
+}
+
+.type19 .line2 {
+  opacity: 0;
+}
+
+.type19 .line3 {
+  transform: rotate(-135deg) translate(48%, 350%);
+}
+
+/* transformation 20 */
+.type20 .line1 {
+  transform: translate(-10%, 500%) rotate(405deg);
+}
+
+.type20 .line2 {
+  opacity: 0;
+  transform: rotate(360deg);
+}
+
+.type20 .line3 {
+  transform: translate(-10%, -500%) rotate(495deg);
+}
+
+/* transformation 21 */
+.type21 .line1 {
+  transform: translate(-10%, 500%) rotate(-405deg);
+}
+
+.type21 .line2 {
+  opacity: 0;
+  transform: rotate(-360deg);
+}
+
+.type21 .line3 {
+  transform: translate(-10%, -500%) rotate(-495deg);
+}
+
+/* transformation 22 */
+.type22 .line1 {
+  transform: translate(-30%, 270%) rotate(-50deg);
+}
+
+.type22 .line2 {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+.type22 .line3 {
+  transform: translate(30%, -270%) rotate(50deg);
+}
+
+/* transformation 23 */
+.type23 .line1 {
+  transform: translate(-30%, 270%) rotate(50deg);
+}
+
+.type23 .line2 {
+  opacity: 0;
+  transform: rotate(90deg);
+}
+
+.type23 .line3 {
+  transform: translate(30%, -270%) rotate(-50deg);
+}
+
+/* transformation 24 */
+.type24 .line1 {
+  transform: translate(-30%, 270%) rotate(-50deg);
+}
+
+.type24 .line2 {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+.type24 .line3 {
+  transform: translate(30%, -270%) rotate(-130deg);
+}
+
+/* transformation 25 */
+.type25 .line1 {
+  transform: translate(-30%, 270%) rotate(-130deg);
+}
+
+.type25 .line2 {
+  opacity: 0;
+  transform: rotate(-90deg);
+}
+
+.type25 .line3 {
+  transform: translate(30%, -270%) rotate(-50deg);
+}
+
+/* transformation 26 */
+.type26 .line1 {
+  transform: translate(-30%, 270%) rotate(-230deg);
+}
+
+.type26 .line2 {
+  opacity: 0;
+  transform: rotate(-270deg);
+}
+
+.type26 .line3 {
+  transform: translate(30%, -270%) rotate(-310deg);
+}
+
+/* transformation 27 */
+.type27 .line1 {
+  transform: translate(-30%, 270%) rotate(-310deg);
+}
+
+.type27 .line2 {
+  opacity: 0;
+  transform: rotate(-270deg);
+}
+
+.type27 .line3 {
+  transform: translate(30%, -270%) rotate(-230deg);
+}
+
+/* transformation 28 */
+.type28 .line1 {
+  transform: translate(-30%, 270%) rotate(-410deg);
+}
+
+.type28 .line2 {
+  opacity: 0;
+  transform: rotate(-450deg);
+}
+
+.type28 .line3 {
+  transform: translate(30%, -270%) rotate(-490deg);
+}
+
+/* transformation 29 */
+.type29 .line1 {
+  transform: translate(-30%, 270%) rotate(-490deg);
+}
+
+.type29 .line2 {
+  opacity: 0;
+  transform: rotate(-450deg);
+}
+
+.type29 .line3 {
+  transform: translate(30%, -270%) rotate(-410deg);
+}
+
+/* transformation 30 */
+.type30 .line1 {
+  transform: rotate(45deg) translate(10%, -50%);
+}
+
+.type30 .line3 {
+  transform: rotate(-45deg) translate(10%, 50%);
+}
+
+/* transformation 31 */
+.type31 .line1 {
+  transform: rotate(-45deg) translate(-10%, -50%);
+}
+
+.type31 .line3 {
+  transform: rotate(45deg) translate(-10%, 50%);
+}
+
+/* transformation 32 */
+.type32 .line1 {
+  transform: rotate(405deg) translate(10%, -50%);
+}
+
+.type32 .line3 {
+  transform: rotate(-405deg) translate(10%, 50%);
+}
+
+/* transformation 33 */
+.type33 .line1 {
+  transform: rotate(-405deg) translate(-10%, -50%);
+}
+
+.type33 .line3 {
+  transform: rotate(405deg) translate(-10%, 50%);
+}
+
+/* transformation 34 */
+.type34 .line1 {
+  transform: translate(-15%, 500%) rotate(225deg);
+}
+
+.type34 .line3 {
+  transform: translate(-15%, -500%) rotate(-225deg);
+}
+
+/* transformation 35 */
+.type35 .line1 {
+  transform: translate(15%, 500%) rotate(135deg);
+}
+
+.type35 .line3 {
+  transform: translate(15%, -500%) rotate(-135deg);
+}
+
+/* transformation 36 */
+.type36 .line1 {
+  transform: rotate(225deg) translate(-40%, -425%);
+}
+
+.type36 .line2 {
+  transform: rotate(180deg);
+}
+
+.type36 .line3 {
+  transform: rotate(135deg) translate(-40%, 425%);
+}
+
+/* transformation 37 */
+.type37 .line1 {
+  transform: rotate(-225deg) translate(40%, -425%);
+}
+
+.type37 .line2 {
+  transform: rotate(-180deg);
+}
+
+.type37 .line3 {
+  transform: rotate(-135deg) translate(40%, 425%);
+}
+
+/* transformation 38 */
+.type38 .line1 {
+  transform: rotate(-135deg) translate(-40%, -425%);
+}
+
+.type38 .line3 {
+  transform: rotate(135deg) translate(-40%, 425%);
+}
+
+/* transformation 39 */
+.type39 .line1 {
+  transform: rotate(135deg) translate(40%, -425%);
+}
+
+.type39 .line3 {
+  transform: rotate(-135deg) translate(40%, 425%);
+}
+
+/* transformation 40 */
+.type40 .line1 {
+  transform: translate(-15%, 500%) rotate(405deg);
+}
+
+.type40 .line2 {
+  transform: rotate(360deg);
+}
+
+.type40 .line3 {
+  transform: translate(-15%, -500%) rotate(495deg);
+}
+
+/* transformation 41 */
+.type41 .line1 {
+  transform: translate(15%, 500%) rotate(-405deg);
+}
+
+.type41 .line2 {
+  transform: rotate(-360deg);
+}
+
+.type41 .line3 {
+  transform: translate(15%, -500%) rotate(-495deg);
+}
+
+/* transformation 42 */
+.type42 .line1 {
+  transform: translate(-30%, 200%) rotate(-50deg);
+}
+
+.type42 .line2 {
+  transform: rotate(-90deg);
+}
+
+.type42 .line3 {
+  transform: translate(30%, -325%) rotate(50deg);
+}
+
+/* transformation 43 */
+.type43 .line1 {
+  transform: translate(-30%, 325%) rotate(50deg);
+}
+
+.type43 .line2 {
+  transform: rotate(90deg);
+}
+
+.type43 .line3 {
+  transform: translate(30%, -200%) rotate(-50deg);
+}
+
+/* transformation 44 */
+.type44 .line1 {
+  transform: translate(-30%, 200%) rotate(-50deg);
+}
+
+.type44 .line2 {
+  transform: rotate(-90deg);
+}
+
+.type44 .line3 {
+  transform: translate(30%, -325%) rotate(-130deg);
+}
+
+/* transformation 45 */
+.type45 .line1 {
+  transform: translate(-30%, 325%) rotate(-130deg);
+}
+
+.type45 .line2 {
+  transform: rotate(-90deg);
+}
+
+.type45 .line3 {
+  transform: translate(30%, -200%) rotate(-50deg);
+}
+
+/* transformation 46 */
+.type46 .line1 {
+  transform: translate(-30%, 200%) rotate(-230deg);
+}
+
+.type46 .line2 {
+  transform: rotate(-270deg);
+}
+
+.type46 .line3 {
+  transform: translate(30%, -325%) rotate(-310deg);
+}
+
+/* transformation 47 */
+.type47 .line1 {
+  transform: translate(-30%, 325%) rotate(-310deg);
+}
+
+.type47 .line2 {
+  transform: rotate(-270deg);
+}
+
+.type47 .line3 {
+  transform: translate(30%, -200%) rotate(-230deg);
+}
+
+/* transformation 48 */
+.type48 .line1 {
+  transform: translate(-30%, 200%) rotate(-410deg);
+}
+
+.type48 .line2 {
+  transform: rotate(-450deg);
+}
+
+.type48 .line3 {
+  transform: translate(30%, -325%) rotate(-490deg);
+}
+
+/* transformation 49 */
+.type49 .line1 {
+  transform: translate(-30%, 325%) rotate(-490deg);
+}
+
+.type49 .line2 {
+  transform: rotate(-450deg);
+}
+
+.type49 .line3 {
+  transform: translate(30%, -200%) rotate(-410deg);
+}
